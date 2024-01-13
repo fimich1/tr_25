@@ -4,7 +4,10 @@ import 'athlets_form.dart';
 
 class NetWorking {
   static const String URL =
-      "https://script.google.com/macros/s/AKfycbzeuHKd5kRpKVbY0ak8klaBMZeZ6wOoDwzpehCheZhJTAKF5co/exec";
+      //"https://script.google.com/macros/s/AKfycbzeuHKd5kRpKVbY0ak8klaBMZeZ6wOoDwzpehCheZhJTAKF5co/exec";
+
+  "https://script.google.com/macros/s/AKfycbzfij5wlPzoncHRz8lfcgUn0A890Hcd4TWWvWilkx6Q2btj6xP8YSv7UnASA8C9slPd/exec";
+
 
       //"https://script.google.com/macros/s/AKfycbyZdvD4qSE2BBUtZ6oMX_BXSwN8urbiHhIFkKdFGf3qpj5aKmo/exec";
   static const STATUS_SUCCESS = "SUCCESS";

@@ -13,11 +13,10 @@ class _PassWordPageState extends State<PassWordPage> {
   // добступ к тексту строки
   TextEditingController textEditingController = TextEditingController();
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar (
+      appBar: AppBar(
         title: Text('Введите пароль'),
       ),
       body: Column(
@@ -37,10 +36,7 @@ class _PassWordPageState extends State<PassWordPage> {
             height: 48.0,
             child: Text(
               '$selectedCurrency',
-              style: TextStyle(
-                  fontSize: 27,
-                  color: Colors.blueGrey),
-
+              style: TextStyle(fontSize: 27, color: Colors.blueGrey),
             ),
           ),
           SizedBox(
@@ -48,10 +44,7 @@ class _PassWordPageState extends State<PassWordPage> {
           ),
           Padding(
             padding: const EdgeInsets.all(32.0),
-
-            child:
-
-            TextField(
+            child: TextField(
               controller: textEditingController,
               style: TextStyle(
                 color: Colors.black,
@@ -72,7 +65,6 @@ class _PassWordPageState extends State<PassWordPage> {
                 ),
               ),
             ),
-
           ),
           ElevatedButton(
             // shape: RoundedRectangleBorder(
@@ -82,29 +74,26 @@ class _PassWordPageState extends State<PassWordPage> {
             //
             // color: Colors.black54,
             //
-              child: Text(
-                'Открыть список',
-                style: TextStyle(
-                    fontSize: 27,
-                color: Colors.deepPurple),
+            child: Text(
+              'Открыть список',
+              style: TextStyle(fontSize: 27, color: Colors.deepPurple),
+            ),
 
-              ),
-
-              onPressed: () {
-                //_sendDatatoScreen(context);
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => ListScreen(text: selectedCurrency,),
-
+            onPressed: () {
+              //_sendDatatoScreen(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ListScreen(
+                    text: selectedCurrency,
                   ),
-                );
-              },
-    ),
+                ),
+              );
+            },
+          ),
           SizedBox(
             height: 48.0,
           ),
-
           Container(
             height: 150.0,
             alignment: Alignment.center,
@@ -113,9 +102,7 @@ class _PassWordPageState extends State<PassWordPage> {
             //child: Platform.isIOS ? iOSPicker() : androidDropdown(),
             child: iOSPicker(),
           ),
-
-       ],
-
+        ],
       ),
     );
   }
@@ -140,17 +127,4 @@ class _PassWordPageState extends State<PassWordPage> {
       children: pickerItems,
     );
   }
-
-  // void _sendDatatoScreen (BuildContext context){
-  //   String textToSend = textEditingController.text;
-  //   Navigator.push(
-  //       context,
-  //       MaterialPageRoute(
-  //           builder: (context) => ListScreen(text: textToSend,),
-  //
-  //       ),
-  //   );
-  // }
-
-
 }
