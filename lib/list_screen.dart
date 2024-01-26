@@ -79,7 +79,9 @@ class RandomWordsState extends State<RandomWords> {
       itemCount: athlets?.length ?? 0,
       itemBuilder: (context, i) {
         final index = i;
-        String row = athlets[index].name;
+        // здесь ормируется строка списка  id не работает
+        String row = athlets[index].name + " " + athlets[index].unit + athlets[index].id + " м";
+        return _buildRow(row);"м";
         return _buildRow(row);
       },
     );
